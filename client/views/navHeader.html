@@ -1,0 +1,25 @@
+<div class="container" ng-controller="projectCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div>
+                <h1 class="nav navbar-nav navbar-default">BridgeDb</h1>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/connect/local" class="fa fa-user"> {{user}}</a>
+                </li>
+                <li>
+                    <a href="/connect/google" class="fa fa-google-plus"></a>
+                </li>
+                <li>
+                    <a href="/connect/facebook" class="fa fa-facebook"></a>
+                </li>
+                <li>
+                    <a href="/connect/twitter" class="fa fa-twitter"></a>
+                </li>
+                <li> <a ui-sref="home" class="btn btn-info btn-lg">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  </div>

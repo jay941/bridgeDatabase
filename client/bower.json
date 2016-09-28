@@ -1,0 +1,23 @@
+{
+  "name": "bridgeDb",
+  "homepage": "https://github.com/nextitsoftsys/bridgeDb",
+  "authors": [
+    "nextitsoftsys <yadav.jayprakash20@yahoo.in>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AngularJS-Toaster": "angularjs-toaster#^2.0.0",
+    "satellizer": "^0.15.5",
+    "smalltalk": "^2.1.2",
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}

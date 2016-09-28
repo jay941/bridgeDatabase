@@ -1,0 +1,25 @@
+{
+  "name": "bridgedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextitsoftsys/bridgeDb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nextitsoftsys/bridgeDb/issues"
+  },
+  "homepage": "https://github.com/nextitsoftsys/bridgeDb#readme",
+  "dependencies": {
+    "express-validator": "^2.20.10",
+    "jwt-simple": "^0.5.0",
+    "satellizer": "^0.15.5"
+  },
+  "devDependencies": {}
+}
