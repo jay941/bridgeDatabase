@@ -1,24 +1,22 @@
 <div ng-controller="projectCtrl">
     <div nav-header></div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4" style="background-color:lavender;">
-          <a ui-sref=".database">
-            <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()">database</button>
-          </a>
-        </div>
-        <div class="col-sm-4" style="background-color:lavender;">
-            <button type="button" class="btn btn-primary" id="myBtn2">storage</button>
-        </div>
-    </div>
-</div>
+<nav class="w3-sidenav w3-white w3-card-2" style="width:15%">
+    <br>
+    <a ui-sref=".database">
+        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:100%">database</button>
+    </a>
+    <a>
+        <button type="button" class="btn btn-primary" id="myBtn2" style="width:100%">storage</button>
+    </a>
+</nav>
+
 <div align="center">
-  <ui-view>
-    <div align="center" class="circle-singleline">
-        Hi
-    </div>
-    Add bridgeDb to your web app
+    <ui-view>
+        <div align="center" class="circle-singleline">
+            Hi
+        </div>
+        Add bridgeDb to your web app
     </ui-view>
 </div>
 

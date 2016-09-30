@@ -416,7 +416,7 @@ ul {
 }
 
 @keyframes zoomIn {
-  
+
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.8, 0.8, 0.8);
@@ -515,6 +515,6 @@ ul {
 }
 
 .Blue{background-color: #008CBA;} /* Blue */
-.Red {background-color: #f44336;} /* Red */ 
-.Gray {background-color: #e7e7e7; color: black;} /* Gray */ 
+.Red {background-color: #f44336;} /* Red */
+.Gray {background-color: #e7e7e7; color: black;} /* Gray */
 .Black{background-color: #555555;} /* Black */
