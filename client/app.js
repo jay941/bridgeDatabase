@@ -64,11 +64,19 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
       })
 
       .state('project', {
-        url: '/project?param?n',
-        templateUrl: 'partials/project.html',
-        controller: 'projectCtrl'
+            url: '/project?param?n',
+            templateUrl: 'partials/project.html',
+						controller:'projectCtrl'
 
-      });
+        }).state('project.database', {
+            url: '/database',
+            templateUrl: 'partials/database.html',
+						controller:'projectCtrl',
+						// onEnter:function(){
+						// 	alert("Inside controller");
+						// }
+        });
+
     $urlRouterProvider.otherwise('/');
 
     /**
