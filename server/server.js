@@ -259,7 +259,7 @@ app.post('/retrive',function(req,res){
 
   project.find({key:key},function(err,projectRe){
       if (err) {
-                res.send('project already available');
+                res.send('Error');
                 //console.log(err);
             }
                else{
@@ -334,7 +334,8 @@ app.post('/auth/google', function(req, res) {
           user.save(function(err) {
             var token = createJWT(user);
 
-            res.send({ token: token });
+            res.send({ existingUser:existingUser, token: token });
+
           });
         });
       }

@@ -64,7 +64,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
       })
 
       .state('project', {
-            url: '/project',
+            url: '/project?param?n',
             templateUrl: 'partials/project.html',
 						controller:'projectCtrl'
 					
