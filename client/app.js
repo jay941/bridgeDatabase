@@ -68,13 +68,18 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
             templateUrl: 'partials/project.html',
 						controller:'projectCtrl'
 
-        }).state('project.database', {
+        })
+        .state('project.database', {
             url: '/database',
             templateUrl: 'partials/database.html',
-						controller:'projectCtrl',
-						// onEnter:function(){
-						// 	alert("Inside controller");
-						// }
+						controller:'projectCtrl'
+						
+        })
+        .state('project.storage', {
+            url: '/storage',
+            templateUrl: 'partials/storage.html',
+						controller:'projectCtrl'
+						
         });
 
     $urlRouterProvider.otherwise('/');
