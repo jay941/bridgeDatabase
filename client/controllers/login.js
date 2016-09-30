@@ -4,7 +4,7 @@ angular.module('MyApp')
       $auth.login($scope.user).then(function(data) {
         console.log('data ',data.data.user.displayName)
           toastr.success('You have successfully signed in!');
-          $location.path('/profile').search({param: data.data.user.displayName,n:data.data.token});
+          $location.path('/profile').search({param: data.data.user.displayName,n:data.data.user._id});
         })
         .catch(function(error) {
           toastr.error(error.data.message, error.status);
@@ -14,7 +14,7 @@ angular.module('MyApp')
       $auth.authenticate(provider).then(function(data) {
         console.log('google data',data)
           toastr.success('You have successfully signed in with ' + provider + '!');
-          $location.path('/profile').search({param:data.data.existingUser.displayName,n:data.data.token});
+          $location.path('/profile').search({param:data.data.existingUser.displayName,n:data.data.existingUser._id});
         })
         .catch(function(error) {
           if (error.message) {

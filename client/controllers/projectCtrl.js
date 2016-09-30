@@ -44,7 +44,7 @@ $http.post('http://localhost:3000/retrive',data).success(function (data) {
             });
  };
  $scope.project=function(){
-     $location.path('/project')  ;
+     $location.path('/project').search({param:$scope.param,n:$scope.n})  ;
  }
     })
     .directive('navHeader', function() {
