@@ -1,10 +1,10 @@
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
-  .config(function($stateProvider, $urlRouterProvider, $authProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**
      * Helper auth functions
      */
-    var skipIfLoggedIn = function($q, $auth) {
+    var skipIfLoggedIn = function ($q, $auth) {
       var deferred = $q.defer();
       if ($auth.isAuthenticated()) {
         deferred.reject();
@@ -14,7 +14,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
       return deferred.promise;
     };
 
-    var loginRequired = function($q, $location, $auth) {
+    var loginRequired = function ($q, $location, $auth) {
       var deferred = $q.defer();
       if ($auth.isAuthenticated()) {
         deferred.resolve();
@@ -30,7 +30,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
     $stateProvider
       .state('home', {
         url: '/',
-  
+
         templateUrl: 'partials/home.html'
       })
       .state('login', {
@@ -64,22 +64,22 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
       })
 
       .state('project', {
-            url: '/project?param?n',
-            templateUrl: 'partials/project.html',
-						controller:'projectCtrl'
-					
-        });
+        url: '/project?param?n',
+        templateUrl: 'partials/project.html',
+        controller: 'projectCtrl'
+
+      });
     $urlRouterProvider.otherwise('/');
 
     /**
      *  Satellizer config
      */
-      $authProvider.google({
+    $authProvider.google({
 						url: 'http://localhost:3000/auth/google',
 						clientId: '145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
 						redirectUri: 'http://localhost:3000/profile'
 
 				});
 
-    
+
   });
