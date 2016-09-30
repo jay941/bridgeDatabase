@@ -1,0 +1,17 @@
+
+<div>
+<input type="file" id="myFile">
+</div>
+<script>
+$(document).ready(function () {
+	$('input[type=file]').change(function () {
+		var val = $(this).val().toLowerCase();
+		var regex  =  new RegExp("(.*?).(json)$");
+		if(!(regex.test(val)))
+		{
+			$(this).val('');
+			alert('Incorrect file selected!!');
+		}
+    });
+});
+</script>

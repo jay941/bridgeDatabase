@@ -44,7 +44,7 @@ var project=mongoose.Schema({
        key :{type:String ,required:true},
      //  password:{type:String,required:true}
   });
- 
+
 
 userSchema.pre('save', function(next) {
   var user = this;
@@ -179,7 +179,7 @@ app.post('/auth/login', function(req, res) {
       res.send({ user:user,token: createJWT(user) });
     });
     }
-    
+
   });
 });
 
@@ -206,10 +206,10 @@ app.post('/auth/signup', function(req, res) {
           res.send({ existingUser:existingUser, token: createJWT(result) });
         });
       }
-     
+
     });
     }
-    
+
   });
 });
 
@@ -239,7 +239,7 @@ app.post('/project', function(req, res) {
                  else{
                    res.send("saved");
                  }
-               
+
                })
               console.log("print user");
                 // res.send(user);
@@ -256,21 +256,21 @@ app.post('/project', function(req, res) {
  */
 app.post('/retrive',function(req,res){
    var  key=req.body.key;
-   
+
   project.find({key:key},function(err,projectRe){
       if (err) {
                 res.send('project already available');
                 //console.log(err);
-            } 
+            }
                else{
                    res.send(projectRe);
                  }
-               
-            
+
+
               console.log("print user");
                 // res.send(user);
 
-            
+
 
   })
 })
@@ -333,7 +333,7 @@ app.post('/auth/google', function(req, res) {
           user.displayName = profile.name;
           user.save(function(err) {
             var token = createJWT(user);
-           
+
             res.send({ token: token });
           });
         });
