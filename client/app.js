@@ -30,7 +30,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
     $stateProvider
       .state('home', {
         url: '/',
-  
+
         templateUrl: 'partials/home.html'
       })
       .state('login', {
@@ -67,7 +67,14 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
             url: '/project?param?n',
             templateUrl: 'partials/project.html',
 						controller:'projectCtrl'
-					
+
+        }).state('project.database', {
+            url: '/database',
+            templateUrl: 'partials/database.html',
+						controller:'projectCtrl',
+						// onEnter:function(){
+						// 	alert("Inside controller");
+						// }
         });
     $urlRouterProvider.otherwise('/');
 
@@ -81,5 +88,5 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
 
 				});
 
-    
+
   });

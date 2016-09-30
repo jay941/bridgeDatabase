@@ -32,7 +32,7 @@ angular.module('MyApp')
           angular.forEach(dots, function(el) {
             el.style.backgroundColor = '#ebeef1';
           });
-          
+
           if (ngModel.$viewValue) {
             // Increase strength level
             matches.positive.lower = ngModel.$viewValue.match(/[a-z]/g);

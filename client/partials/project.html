@@ -1,14 +1,27 @@
-<div >
+<div ng-controller="projectCtrl">
     <div nav-header></div>
 </div>
-<!-- <div class='circle-icon'>
-    <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-</div> -->
-<div align="center">
-    <div align="center" class="circle-singleline">
-        Hello
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4" style="background-color:lavender;">
+          <a ui-sref=".database">
+            <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()">database</button>
+          </a>
+        </div>
+        <div class="col-sm-4" style="background-color:lavender;">
+            <button type="button" class="btn btn-primary" id="myBtn2">storage</button>
+        </div>
     </div>
 </div>
+<div align="center">
+  <ui-view>
+    <div align="center" class="circle-singleline">
+        Hi
+    </div>
+    Add bridgeDb to your web app
+    </ui-view>
+</div>
+
 <!-- <div class='circle-multiline'>
     <span style='font-size: 2.5em'>Big Text</span></br>
     here is more text

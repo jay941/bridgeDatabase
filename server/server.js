@@ -20,6 +20,16 @@ var mongoose = require('mongoose');
 var request = require('request');
 
 var config = require('./config');
+var jsonfile = require('jsonfile');
+var file = '/home/bridgeit/Documents/package.json';
+jsonfile.readFile(file, function(err, obj) {
+  if(err){
+    console.log("Invalid file");
+  }else {
+    console.log(obj);
+  }
+
+});
 
 var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
