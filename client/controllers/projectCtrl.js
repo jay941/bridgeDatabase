@@ -12,7 +12,7 @@ angular.module('MyApp')
      $scope.user=$scope.param;
      console.log('data',data)
         
-$http.post('http://localhost:3000/retrive',data).success(function (data) {
+$http.post('http://localhost:3002/retrive',data).success(function (data) {
 
             console.log(data);
             $scope.projectName1 = data;
@@ -30,10 +30,10 @@ $http.post('http://localhost:3000/retrive',data).success(function (data) {
 
 
 
-            $http.post('http://localhost:3000/project', x).success(function (data1) {
+            $http.post('http://localhost:3002/project', x).success(function (data1) {
                 console.log(data1);
 
-            $http.post('http://localhost:3000/retrive',data).success(function (data12) {
+            $http.post('http://localhost:3002/retrive',data).success(function (data12) {
 
             console.log(data12);
             $scope.projectName1 = data12;
