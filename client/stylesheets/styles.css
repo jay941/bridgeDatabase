@@ -26,7 +26,7 @@ ul {
 }
 
 .navbar {
-  border: 0;
+  border: 0;m
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
 }
 
@@ -540,3 +540,40 @@ div.container1 {
 .Red {background-color: #f44336;} /* Red */
 .Gray {background-color: #e7e7e7; color: black;} /* Gray */
 .Black{background-color: #555555;} /* Black */
+
+
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+
+
+
+
+
+
+

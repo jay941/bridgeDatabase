@@ -78,7 +78,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         .state('project.storage', {
             url: '/storage',
             templateUrl: 'partials/storage.html',
-						controller:'projectCtrl'
+						controller:'storageCtrl'
 						
         });
 
@@ -88,9 +88,9 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
      *  Satellizer config
      */
     $authProvider.google({
-						url: 'http://localhost:3000/auth/google',
-						clientId: '145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
-						redirectUri: 'http://localhost:3000/profile'
+						url: 'http://localhost:3002/auth/google',
+						clientId:'145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
+						redirectUri: 'http://localhost:3002/profile'
 
 				});
 
