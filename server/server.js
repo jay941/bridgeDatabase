@@ -110,7 +110,7 @@ mongoose.connection.on('error', function(err) {
 
 var app = express();
 
-app.set('port', process.env.NODE_PORT || 3000);
+app.set('port', process.env.NODE_PORT || 3002);
 app.set('host', process.env.NODE_IP || 'localhost');
 app.use(cors());
 app.use(logger('dev'));
