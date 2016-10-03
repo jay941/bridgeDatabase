@@ -72,14 +72,14 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         .state('project.database', {
             url: '/database',
             templateUrl: 'partials/database.html',
-						controller:'projectCtrl'
-						
+						//controller:'projectCtrl'
+
         })
         .state('project.storage', {
             url: '/storage',
             templateUrl: 'partials/storage.html',
 						controller:'projectCtrl'
-						
+
         });
 
     $urlRouterProvider.otherwise('/');

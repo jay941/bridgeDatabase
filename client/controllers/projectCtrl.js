@@ -11,7 +11,7 @@ angular.module('MyApp')
 
      $scope.user=$scope.param;
      console.log('data',data)
-        
+
 $http.post('http://localhost:3000/retrive',data).success(function (data) {
 
             console.log(data);
@@ -52,4 +52,3 @@ return {
             templateUrl: 'partials/nav.html'
         };
     });
- 
