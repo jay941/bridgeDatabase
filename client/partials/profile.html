@@ -1,4 +1,4 @@
-<div >
+<div>
     <div nav-header></div>
 </div>
 <div class="container" ng-controller="projectCtrl">
@@ -39,15 +39,18 @@
 
     <hr>
     <div class="container">
-        <div ng-repeat="d in projectName1 track by $index">
-            <div class="col-sm-4">
-                <div class="div1">
-                    <button class=" button Gray" ng-click="project()">{{d.projectName}}</button>
-                    </div>
+      <div class="row">
+  <div class="col-sm-4">
+            <div ng-repeat="d in projectName1 track by $index">
 
-</div>
+                    <div class="div1">
+
+                        <button class=" button Gray" ng-click="project()">{{d.projectName}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </div>
 
 
