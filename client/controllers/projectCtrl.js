@@ -1,5 +1,5 @@
 angular.module('MyApp')
-.controller('projectCtrl', function ($scope, $location, $http,$stateParams) {
+.controller('projectCtrl', function ($scope, $location, $http,$stateParams,toastr) {
      $scope.projectName1 = "";
         $scope.projectName = "";
         $scope.param=$stateParams.param
@@ -13,7 +13,7 @@ angular.module('MyApp')
      console.log('data',data)
 
 
-$http.post('http://localhost:3000/retrive',data).success(function (data) {
+$http.post('http://localhost:3002/retrive',data).success(function (data) {
 
             console.log(data);
             $scope.projectName1 = data;
@@ -33,7 +33,7 @@ $http.post('http://localhost:3000/retrive',data).success(function (data) {
 
             $http.post('http://localhost:3002/project', x).success(function (data1) {
                 console.log(data1);
-
+              toastr.success(data1);
             $http.post('http://localhost:3002/retrive',data).success(function (data12) {
 
             console.log(data12);

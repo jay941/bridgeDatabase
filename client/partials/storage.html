@@ -1,24 +1,50 @@
 <div ng-controller="storageCtrl">
-<div class="card">
-  <div class="container1">
+
+  
+
+  <md-card>
+  <md-card-content>
+    <md-card-header-text>
+    <input type="file" id="fileLoader" name="file"  ng-model="data" multiple
+              ng-files="getTheFiles($files)" />
       <button type="button" class="btn btn-primary" id="myBtn1" ng-click="upload()" style="width:20%"> <i class="fa fa-upload" aria-hidden="true"></i>
 UPLOAD FILE</button>
-
+&nbsp
 <button type="button"  class="btn btn-primary btn-circle "><i class="glyphicon glyphicon-plus"></i></button>
 
+    </md-card-header-text>
+  </md-card-header>
+  <hr class="dark">
+  <md-card-content >
+  
 
-
-
+<div layout-margin >
+  <mdt-table table-card="{visible: true, title: 'Images'}"
+             selectable-rows="true"
+             alternate-headers="'contextual'"
+             
+             delete-row-callback="deleteRowCallback(rows)" style="overflow:scroll;">
+    <mdt-header-row>
+      <mdt-column align-rule="left">Name</mdt-column>
+      <mdt-column align-rule="right">Size</mdt-column>
+      <mdt-column align-rule="right">Date</mdt-column>
      
-  </div>
-
-  <div class="header">
-    <h1>1</h1>
-   
-  </div>
-
-
+    </mdt-header-row>
+    <mdt-row ng-repeat="nutrition in nutritionList" table-row-id="nutrition.id">
+      <mdt-cell>{{nutrition.name}}</mdt-cell>
+      <mdt-cell>{{nutrition.calories}}</mdt-cell>
+      <mdt-cell>{{nutrition.fat}}</mdt-cell>
+      
+    </mdt-row>
+  </mdt-table>
 </div>
+
+
+  </md-card-content>
+    </md-card>
+
+
+
 </div>
 
 

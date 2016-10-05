@@ -1,7 +1,5 @@
 /**
- * Satellizer Node.js Example
- * (c) 2015 Sahat Yalkabov
- * License: MIT
+ *
  */
 
 var path = require('path');
@@ -56,18 +54,8 @@ var userSchema = new mongoose.Schema({
     },
     displayName: String,
     picture: String,
-    bitbucket: String,
-    facebook: String,
-    foursquare: String,
-    google: String,
-    github: String,
-    instagram: String,
-    linkedin: String,
-    live: String,
-    yahoo: String,
-    twitter: String,
-    twitch: String,
-    spotify: String
+    google: String
+    
 });
 var project = mongoose.Schema({
     projectName: {
@@ -293,10 +281,12 @@ app.post('/project', function(req, res) {
         projectName: projectName,
         key: key
     });
-    console.log('projectcreated', projectName);
-    data.save(function(err, user) {
+    console.log('projectcreated', key);
+project.find({ projectName: projectName},function(err,result){
+    if(err){
+        data.save(function(err, user) {
         if (err) {
-            res.send('project already available');
+            res.send('Error');
             //console.log(err);
         } else {
             project.find(function(err, result) {
@@ -311,7 +301,15 @@ app.post('/project', function(req, res) {
             // res.send(user);
 
         }
-    })
+      })
+    }
+    else{
+        res.send("project is already prasent");
+        console.log('project is already prasent');
+    }
+})
+
+    
 
 });
 
