@@ -1,8 +1,7 @@
 
- <div ng-controller="fupController">
-  <input type="file" id="file1" name="file" multiple
-              ng-files="getTheFiles($files)" />
-  <input type="button" ng-click="uploadFiles()" value="Upload" />
+ <div ng-controller="submitController">
+  <input type="file" id="file1" name="file" file-model="myFile" />
+  <input type="button" ng-click="uploadFile()" value="Upload" />
 </div>
 <script>
 $(document).ready(function () {

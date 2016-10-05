@@ -30,7 +30,6 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
     $stateProvider
       .state('home', {
         url: '/',
-
         templateUrl: 'partials/home.html'
       })
       .state('login', {
