@@ -80,7 +80,7 @@ angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'n
         .state('project.storage', {
             url: '/storage',
             templateUrl: 'partials/storage.html',
-						controller:'projectCtrl'
+						controller:'storageCtrl'
 
         });
 

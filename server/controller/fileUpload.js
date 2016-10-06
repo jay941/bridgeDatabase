@@ -7,7 +7,7 @@ var upload = require('../helper/multerStorage.js');
 var multiparty = require('multiparty');
 
 router.post('/', function(req, res) {
-<<<<<<< HEAD
+
     console.log(req);
 
     var form = new multiparty.Form();
@@ -34,7 +34,7 @@ router.post('/', function(req, res) {
     //     });
     //     res.end("File is uploaded successfully!");
     // });
-=======
+
   console.log(req.body);
   var form = new multiparty.Form();
 
@@ -43,7 +43,7 @@ router.post('/', function(req, res) {
       console.log('fields',fields);
     });
   
->>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
+
 });
 
 module.exports = router;
