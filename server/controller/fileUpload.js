@@ -8,10 +8,9 @@ var multiparty = require('multiparty');
 
 router.post('/', function(req, res) {
 
-    console.log(req);
 
     var form = new multiparty.Form();
- 
+
     form.parse(req, function(err, fields, files) {
      console.log('files',files);
     });
@@ -35,14 +34,7 @@ router.post('/', function(req, res) {
     //     res.end("File is uploaded successfully!");
     // });
 
-  console.log(req.body);
-  var form = new multiparty.Form();
 
-    form.parse(req, function(err, fields, files) {
-      console.log('files',files);
-      console.log('fields',fields);
-    });
-  
 
 });
 
