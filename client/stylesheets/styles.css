@@ -1,6 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
+ background-color: blanchedalmond
+  size: 100px;
+=======
   background: #e4e7ec;
+>>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,7 +94,11 @@ ul {
 
 .center-form {
   width: 330px;
+<<<<<<< HEAD
+  margin: 9% auto;
+=======
   margin: 12% auto;
+>>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
 }
 
 .signup-or-separator {

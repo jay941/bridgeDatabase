@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+{
+  "name": "bridgedb",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "ejs": "~0.8.5",
+    "mongoose": "~3.8.1",
+    "passport": "~0.1.17",
+    "passport-local": "~0.1.6",
+    "passport-facebook": "~1.0.2",
+    "passport-twitter": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "connect-flash": "~0.1.1",
+    "bcrypt-nodejs": "latest",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "express-session": "~1.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Code for the entire scotch.io tutorial series: Complete Guide to Node Authentication",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinderaju/NodeApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinderaju/NodeApp/issues"
+  },
+  "homepage": "https://github.com/shinderaju/NodeApp#readme"
+=======
 
 {
   "name": "satellizer-server",
@@ -16,4 +54,5 @@
     "morgan": "^1.7.0",
     "request": "^2.69.0"
   }
+>>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
 }
