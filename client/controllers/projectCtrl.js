@@ -2,7 +2,7 @@ angular.module('MyApp')
     .controller('projectCtrl', function($scope, $location, $http, $stateParams, toastr) {
         $scope.projectName1 = "";
         $scope.projectName = "";
-        $scope.param = $stateParams.param
+        $scope.param = $stateParams.param;
         $scope.n = $stateParams.n;
         // console.log($scope.param,$scope.n)
         var data = {
