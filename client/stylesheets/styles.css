@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background: lightblue;
+ background-color: blanchedalmond
   size: 100px;
 }
 
@@ -93,7 +93,7 @@ ul {
 
 .center-form {
   width: 330px;
-  margin: 10% auto;
+  margin: 9% auto;
 }
 
 .signup-or-separator {
