@@ -505,24 +505,37 @@ ul {
 }
 
 
-/*div.card {
-  width: 850px;
-  height: 595px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: right;
+div.card {
+   height: 500px;
+   background-color:white;
+    color: white;
+    padding: 8px;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 260px;
+    font-size: 20px;
+     
+ 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   
 }
 div.header {
     background-color:white;
     color: white;
-    padding: 245px;
+    padding: 8px;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 260px;
     font-size: 40px;
+     text-align: right;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 }
 div.container1 {
   background-color:gainsboro;
     padding: 10px;
     width: 850px;
-}*/
+}
 
 
 .button {
