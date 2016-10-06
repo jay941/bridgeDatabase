@@ -1,7 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
  background-color: blanchedalmond
   size: 100px;
+=======
+  background: #e4e7ec;
+>>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,12 +26,12 @@ ul {
   padding-right: 15px;
 }
 
-/*.text-muted {
+.text-muted {
   color: #90939a;
-}*/
+}
 
 .navbar {
-  border: 0em;
+  border: 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
 }
 
@@ -37,12 +41,10 @@ ul {
 }
 
 .navbar-nav {
-  float: right;
-  margin-left: 20px;
+  float: left;
+  margin: 0;
 }
-#top{
-  margin-top: 20px;
-}
+
 .navbar-nav > li {
   float: left;
 }
@@ -75,7 +77,6 @@ ul {
   border-color: #cfd9D7;
   border-radius: 2px;
   box-shadow: 0 8px 17px rgba(0, 0, 0, .2);
-  margin-top:100px;
 }
 
 .panel-default > .panel-heading {
@@ -93,7 +94,11 @@ ul {
 
 .center-form {
   width: 330px;
+<<<<<<< HEAD
   margin: 9% auto;
+=======
+  margin: 12% auto;
+>>>>>>> 3cb6df484727c4798e839f35a60ffbfa9f98b11e
 }
 
 .signup-or-separator {
@@ -505,7 +510,7 @@ ul {
 }
 
 
-/*div.card {
+div.card {
   width: 850px;
   height: 595px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -524,7 +529,7 @@ div.container1 {
   background-color:gainsboro;
     padding: 10px;
     width: 850px;
-}*/
+}
 
 
 .button {
@@ -544,111 +549,3 @@ div.container1 {
 .Red {background-color: #f44336;} /* Red */
 .Gray {background-color: #e7e7e7; color: black;} /* Gray */
 .Black{background-color: #555555;} /* Black */
-
-
-
-
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
-}
-.btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
-}
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 35px;
-}
-#fileLoader
-{
-    display:none;
-}
-
-
-
-.dark{
-  color: black;
-background-color:black;
-height: 2px;
-}
-
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 150%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-
-
-.navbar-fixed-left {
-  width: 200px;
-  position: fixed;
-  border-radius: 0;
-  height: 100%;
-  background-color: white;
-  margin-top: 51px
-  
-}
-
-.navbar-fixed-left .navbar-nav > li {
-  float: none;  /* Cancel default li float: left */
-  width: 139px;
-
-}
-
-.navbar-fixed-left + .container {
-  padding-left: 160px;
- 
-}
- 
-
-#myBtn1{
-margin-bottom: 5px;
-}
-
-
-/*table*/

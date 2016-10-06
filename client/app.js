@@ -1,4 +1,7 @@
+
 angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
+
+
   .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**
@@ -77,9 +80,7 @@ angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'n
         .state('project.storage', {
             url: '/storage',
             templateUrl: 'partials/storage.html',
-
-						controller:'storageCtrl'
-						
+						controller:'projectCtrl'
 
         });
 
@@ -89,9 +90,9 @@ angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'n
      *  Satellizer config
      */
     $authProvider.google({
-						url: 'http://localhost:3002/auth/google',
-						clientId:'145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
-						redirectUri: 'http://localhost:3002/profile'
+						url: 'http://localhost:3000/auth/google',
+						clientId: '145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
+						redirectUri: 'http://localhost:3000/profile'
 
 				});
 

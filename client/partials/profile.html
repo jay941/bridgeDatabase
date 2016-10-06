@@ -39,9 +39,11 @@
 
     <hr>
     <div class="container">
-        <div ng-repeat="d in projectName1 track by $index">
-            <div class="col-sm-4">
-                <div class="div1">
+      <div class="row">
+  <div class="col-sm-4">
+            <div ng-repeat="d in projectName1 track by $index">
+
+                    <div class="div1">
 
                         <button class=" button Gray" ng-click="project()">{{d.projectName}}</button>
                     </div>

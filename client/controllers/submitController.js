@@ -1,4 +1,4 @@
-angular.module('MyApp').controller('submitController', function ($scope, $http) {
+angular.module('MyApp').controller('submitController', function ($scope, $http,$stateParams) {
   $scope.uploadFile = function(){
 
       var file = $scope.myFile;
@@ -6,6 +6,11 @@ angular.module('MyApp').controller('submitController', function ($scope, $http) 
       var fd = new FormData();
       fd.append('file', file);
       console.log($scope.myFile);
+      var data ={
+        key:$stateParams.n
+      };
+      fd.append('key',JSON.stringify(data))
+      console.log(fd);
       $http.post(uploadUrl,fd, {
           transformRequest: angular.identity,
           headers: {'Content-Type': undefined}

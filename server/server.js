@@ -1,5 +1,7 @@
 /**
- *
+ * Satellizer Node.js Example
+ * (c) 2015 Sahat Yalkabov
+ * License: MIT
  */
 
 var path = require('path');
@@ -17,7 +19,7 @@ var mongoose = require('mongoose');
 var request = require('request');
 var config = require('./config');
 var jsonfile = require('jsonfile');
-
+var multer = require('multer');
 var app = express();
 
 app.set('port', process.env.NODE_PORT || 3000);
@@ -38,6 +40,7 @@ if (app.get('env') === 'production') {
         protocol == 'https' ? next() : res.redirect('https://' + req.hostname + req.url);
     });
 }
+
 /*
  |--------------------------------------------------------------------------
  | Start the Server
