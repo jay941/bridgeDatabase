@@ -5,18 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>BridgDB</title>
   <link href="favicon.png" rel="shortcut icon">
-  <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.css" rel="stylesheet">
  <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+ <link href="stylesheets/navbar-fixed-side.css" rel="stylesheet" />
+
   <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
-  <link href="/stylesheets/angular-toastr.css" rel="stylesheet">
+ <link href="bower_components/angular-toastr/dist/angular-toastr.css" rel="stylesheet"> 
   <link href="/stylesheets/styles.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-</head>
+  <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+  <link href="bower_components/md-data-table/dist/md-data-table-style.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+  </head>
 <body>
 
 
@@ -31,6 +34,14 @@
 <script src="/vendor/angular-ui-router.js"></script>
 <script src="/vendor/angular-toastr.tpls.js"></script>
 <script src="/vendor/satellizer.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script  src="bower_components/md-data-table/dist/md-data-table.js"></script>
+<script  src="bower_components/md-data-table/dist/md-data-table-templates.js"></script>
+<script  src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+<script  src="bower_components/lodash/lodash.min.js"></script>
+
+
 
 <!-- Application Code -->
 <script src="/app.js"></script>
@@ -42,10 +53,11 @@
 <script src="/controllers/logout.js"></script>
 <script src="/controllers/projectCtrl.js"></script>
 <script src="/controllers/navbar.js"></script>
+<script src="/controllers/fileUpload.js"></script>
+<script src="/controllers/storageCtrl.js"></script>
 <script src="/services/account.js"></script>
 <script src="/controllers/submitController.js"></script>
-<script src="/controllers/storageCtrl.js"></script>
-
+<script src="/services/multipartForm.js"></script>
 
 </body>
 </html>
