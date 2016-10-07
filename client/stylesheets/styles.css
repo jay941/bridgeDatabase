@@ -44,6 +44,9 @@ ul {
 #top{
   margin-top: 20px;
 }
+#top1{
+  margin-top: 70px;
+}
 .navbar-nav > li {
   float: left;
 }

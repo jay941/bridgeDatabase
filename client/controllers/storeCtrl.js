@@ -1,13 +1,12 @@
 angular.module('MyApp').controller('storeCtrl', function ($scope, $http, Upload,$stateParams) {
-$scope.uploadFiles=function(files){
-     $scope.files = files;
-     console.log( $scope.files);
+$scope.uploadFiles=function(file){
+     $scope.file = file;
+     console.log( $scope.file);
 
-        if (files && files.length) {
-            Upload.upload({
+      Upload.upload({
                 url: 'http://localhost:3000/imageUpload',
                 data: {
-                    files: files,
+                    file:  $scope.file,
                     key:$stateParams.ProKey
                 }
             }).then(function (response) {
@@ -16,29 +15,12 @@ $scope.uploadFiles=function(files){
                     console.log("hii", $scope.result);
                
             });
-        }
- $scope.checkAll = function () {
-        if (!$scope.selectedAll) {
-            $scope.selectedAll = true;
-        } else {
-            $scope.selectedAll = false;
-        }
-        angular.forEach($scope.personalDetails, function(personalDetail) {
-            personalDetail.selected = $scope.selectedAll;
-        });
-    };    
+        
+
     }
-     $scope.checkAll = function () {
-         console.log('call')
-        if (!$scope.selectedAll) {
-            $scope.selectedAll = true;
-        } else {
-            $scope.selectedAll = false;
-        }
-        angular.forEach($scope.personalDetails, function(personalDetail) {
-            personalDetail.selected = $scope.selectedAll;
-        });
-    };    
+
+    
+   
      $scope.personalDetails = [
         {
             'fname':'Muhammed',
@@ -105,6 +87,6 @@ $scope.uploadFiles=function(files){
             }); 
             $scope.personalDetails = newDataList;
         };
-   
-
+           
+    
 })

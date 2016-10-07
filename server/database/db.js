@@ -14,17 +14,10 @@ var userSchema = new mongoose.Schema({
     displayName: String,
     picture: String,
     bitbucket: String,
-    facebook: String,
-    foursquare: String,
+    
     google: String,
-    github: String,
-    instagram: String,
-    linkedin: String,
-    live: String,
-    yahoo: String,
-    twitter: String,
-    twitch: String,
-    spotify: String
+    github: String
+    
 });
 userSchema.pre('save', function(next) {
     var user = this;
@@ -71,6 +64,9 @@ var Database = mongoose.Schema({
     data: {
         type: Object,
         required: true,
+    },
+     image: {
+         data: Buffer, contentType: String
     },
 
 });
