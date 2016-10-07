@@ -1,4 +1,9 @@
+
+
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
+
+
+
   .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**
@@ -77,7 +82,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         .state('project.storage', {
             url: '/storage',
             templateUrl: 'partials/storage.html',
-						controller:'projectCtrl'
+						// controller:'storageCtrl'
 
         });
 

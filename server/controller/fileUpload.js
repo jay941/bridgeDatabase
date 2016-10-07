@@ -10,8 +10,10 @@ var db = require('../database/db');
 
 router.post('/', function(req, res) {
 
+
     var form = new multiparty.Form();
     form.parse(req, function(err, fields, files) {
+<<<<<<< HEAD
 
         var data = fields;
         var name = data.key;
@@ -61,5 +63,32 @@ router.post('/', function(req, res) {
     }); //end of form.parse()
 }); //end of post
 
+=======
+     console.log('files',files);
+    });
+    // console.log("in server" + req.files);
+    // upload(req, res, function(err) {
+    //     if (err) {
+    //         console.log("error");
+    //         res.end("Error uploading file.");
+    //     }
+    //     console.log("suceess");
+    //     console.log(req.files);
+    //     jsonfile.readFile(path1, function(err, obj) {
+    //         if (err) {
+    //             console.log("Invalid file");
+    //         } else {
+    //             console.log("reading json file");
+    //             console.log(obj);
+    //         }
+
+    //     });
+    //     res.end("File is uploaded successfully!");
+    // });
+
+
+
+});
+>>>>>>> c9675d449df260c1f118b3843bee64a22485986e
 
 module.exports = router;
