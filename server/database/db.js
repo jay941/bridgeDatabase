@@ -62,3 +62,18 @@ var project = mongoose.Schema({
 
 var project = mongoose.model('project', project);
 exports.project = project;
+
+var Database = mongoose.Schema({
+    projectKey: {
+        type: String,
+        required: true
+    },
+    data: {
+        type: Object,
+        required: true,
+    },
+
+});
+
+var Database = mongoose.model('Database', Database);
+exports. Database =  Database;

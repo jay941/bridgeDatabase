@@ -1,7 +1,4 @@
-
-angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
-
-
+angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
   .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**
@@ -66,7 +63,7 @@ angular.module('MyApp', ['ngResource','mdDataTable','ngMdIcons','ngMaterial', 'n
       })
 
       .state('project', {
-            url: '/project?param?n',
+            url: '/project?param?n?ProKey',
             templateUrl: 'partials/project.html',
 						controller:'projectCtrl'
 

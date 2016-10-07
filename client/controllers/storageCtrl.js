@@ -14,11 +14,11 @@ angular.module('MyApp')
             };
 
     $http.post('http://localhost:3000/fileUpload',$files).success(function (d) {
-                  
+
                 })
                 .error(function () {
                 });
-            
+
     }
      $scope.deleteRowCallback = function(rows){
             $mdToast.show(
@@ -33,82 +33,82 @@ angular.module('MyApp')
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
-            
+
             {
                 id: 610,
                 name: 'KitKat',
                   calories: 159
-               
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             },
             {
                 id: 601,
                 name: 'Frozen joghurt',
                 calories: 159
-                
+
             }
-            
+
         ];
- 
+
 })
