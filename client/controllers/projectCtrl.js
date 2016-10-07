@@ -1,8 +1,9 @@
+
 angular.module('MyApp')
     .controller('projectCtrl', function($scope, $location, $http, $stateParams, toastr) {
         $scope.projectName1 = "";
         $scope.projectName = "";
-        $scope.param = $stateParams.param;
+        $scope.param = $stateParams.param
         $scope.n = $stateParams.n;
         // console.log($scope.param,$scope.n)
         var data = {
@@ -31,10 +32,12 @@ angular.module('MyApp')
                 });
             });
         };
-        $scope.project = function() {
+        $scope.project = function(projectKey) {
+          console.log("pro key "+projectKey);
             $location.path('/project').search({
                 param: $scope.param,
-                n: $scope.n
+                n: $scope.n,
+                ProKey:projectKey
             });
         }
     })

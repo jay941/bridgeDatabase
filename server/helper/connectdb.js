@@ -15,6 +15,7 @@ module.exports = {
         if (state.db) {
             cb();
         } else {
+           mongoose.Promise = global.Promise;
             state.db = mongoose.connect(url);
             cb();
         }

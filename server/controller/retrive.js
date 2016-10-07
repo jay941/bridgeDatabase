@@ -9,7 +9,7 @@ router.post('/', function(req, res) {
         if (err) {
             res.send('Error');
             //console.log(err);
-        } else {
+        } else {console.log(projectRe);
             res.send(projectRe);
         }
         console.log("print user");

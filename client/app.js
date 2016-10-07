@@ -1,8 +1,7 @@
 
+
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ngFileUpload', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
-
-
-  .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**
      * Helper auth functions
@@ -66,7 +65,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngFileUpload', 'ngAnimate'
       })
 
       .state('project', {
-            url: '/project?param?n',
+            url: '/project?param?n?ProKey',
             templateUrl: 'partials/project.html',
 						controller:'projectCtrl'
 

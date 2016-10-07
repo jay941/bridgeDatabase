@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+
   background: lightblue;
   size: 100px;
 }
@@ -93,7 +94,9 @@ ul {
 
 .center-form {
   width: 330px;
+
   margin: 10% auto;
+
 }
 
 .signup-or-separator {
@@ -514,11 +517,11 @@ div.card {
     margin-right: 20px;
     margin-left: 260px;
     font-size: 20px;
-     
- 
+
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-  
+
+
 }
 div.header {
     background-color:white;
@@ -642,7 +645,7 @@ height: 2px;
   height: 100%;
   background-color: white;
   margin-top: 51px
-  
+
 }
 
 .navbar-fixed-left .navbar-nav > li {
@@ -653,11 +656,10 @@ height: 2px;
 
 .navbar-fixed-left + .container {
   padding-left: 160px;
- 
+
 }
- 
+
 
 #myBtn1{
 margin-bottom: 5px;
 }
-
