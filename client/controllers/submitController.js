@@ -23,15 +23,5 @@ angular.module('MyApp').controller('submitController', function ($scope, $http,$
       });
   };
 
-    $scope.upload=function(){
-    $("#fileLoader").click(function(){
-      var file = $scope.myFile;
-      // var uploadUrl = "http://localhost:3000/fileUpload";
-      var fd = new FormData();
-      fd.append('file', file);
-      console.log($scope.myFile);
-    } );
-    console.log('hi')
     
-    }
 });
