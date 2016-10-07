@@ -78,6 +78,11 @@ ul {
   box-shadow: 0 8px 17px rgba(0, 0, 0, .2);
   margin-top:100px;
 }
+.panel1 {
+  border-color: #cfd9D7;
+  border-radius: 2px;
+ 
+}
 
 .panel-default > .panel-heading {
   font-size: 85%;
@@ -511,12 +516,12 @@ ul {
 div.card {
    height: 500px;
    background-color:white;
-    color: white;
     padding: 8px;
     margin-top: 5px;
     margin-right: 20px;
     margin-left: 260px;
     font-size: 20px;
+    overflow: auto;
 
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -592,7 +597,9 @@ div.container1 {
     display:none;
 }
 
-
+.container11{
+ overflow: scroll;
+}
 
 .dark{
   color: black;

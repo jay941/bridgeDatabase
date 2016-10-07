@@ -6,6 +6,7 @@ router.use('/api',require('./api.js'));
 router.use('/auth',require('./loginEmail.js'));
 router.use('/project',require('./project.js'));
 router.use('/retrive',require('./retrive.js'));
+router.use('/imageUpload',require('./imageUpload.js'));
 
 router.get('/home', function(req, res) {
     console.log("inside function");

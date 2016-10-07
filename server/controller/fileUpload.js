@@ -4,7 +4,7 @@ var jsonfile = require('jsonfile');
 var multiparty = require('multiparty');
 var path1 = './fileUpload/uploadFile.json'
 var upload = require('../helper/multerStorage.js');
-var multiparty = require('multiparty');
+
 var fs = require('fs');
 var db = require('../database/db');
 
