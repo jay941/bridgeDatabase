@@ -34,29 +34,28 @@ upload(req,res,function(err) {
 
 
        //stroing image to data base
-       var img=new db.Database;
+       var img=new db.Image();
        var imgPath='./fileUpload/'+fname;
   console.log(imgPath);
         // store an img in binary in mongo
-       img.image.data=fs.readFileSync(imgPath);
-      img.image.contentType = 'image/png';
-      img. projectKey=data.key;
+       img.image=fs.readFileSync(imgPath);
+      img. projectKey=name;
 
-       db.Database.findOne({projectKey: data.key},function(err,result){
+       db.Image.findOne({image:fs.readFileSync(imgPath)},function(err,result){
            if(result){
                res.send("Prasent");
-               console.log('err');
+               console.log('Prasent',result);
            }
            else
            {
                img.save(function(err,result){
                    if(err){
                        res.send(err)
-                       console.log('err');
+                       console.log('err',err);
                    }
                    else{
-                       res.send(result)
-                       console.log('sus');
+                       
+                       console.log('sus',j);
                        fs.unlink('./fileUpload/' + fname, function (err) {
                     if (err) {
                         console.error(err);

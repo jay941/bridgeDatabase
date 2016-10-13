@@ -1,22 +1,23 @@
-angular.module('MyApp').controller('storeCtrl', function ($scope, $http, Upload,$stateParams) {
+angular.module('MyApp').controller('storeCtrl', function ($scope, $http,toastr, Upload,$stateParams) {
 $scope.uploadFiles=function(file){
-     $scope.file = file;
-     console.log( $scope.file);
 
-      Upload.upload({
+    //  console.log( file);
+     if(file!==null){
+         Upload.upload({
                 url: 'http://localhost:3000/imageUpload',
                 data: {
-                    file:  $scope.file,
+                    file: file,
                     key:$stateParams.ProKey
                 }
             }).then(function (response) {
                
                     $scope.result = response.data;
+                     toastr.success($scope.result);
                     console.log("hii", $scope.result);
                
             });
         
-
+     }
     }
 
     

@@ -1,6 +1,6 @@
 
 
-angular.module('MyApp', ['ngResource', 'ngMessages', 'ngFileUpload', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
+angular.module('MyApp', ['ngResource','ngDialog', 'ngMessages', 'switcher','ngFileUpload', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'])
 .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
 
     /**

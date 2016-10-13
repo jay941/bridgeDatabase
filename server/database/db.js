@@ -64,12 +64,24 @@ var Database = mongoose.Schema({
     data: {
         type: Object,
         required: true,
+    }
+
+});
+var Database = mongoose.model('Database', Database);
+exports. Database =  Database;
+
+var Image = mongoose.Schema({
+    projectKey: {
+        type: String,
+        required: true
     },
+    
      image: {
-         data: Buffer, contentType: String
-    },
+         
+         type: Buffer
+    }
 
 });
 
-var Database = mongoose.model('Database', Database);
-exports. Database =  Database;
+var Image = mongoose.model('Image', Image);
+exports. Image =  Image;

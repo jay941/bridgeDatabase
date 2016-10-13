@@ -1,36 +1,161 @@
-<div >
+<div>
     <div nav-header></div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-left">
-  <ul class="nav navbar-nav" id="top">
-      <br>
-   <a ui-sref="project">
-        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Home</button>
-    </a>
-    <a ui-sref=".database">
-        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Database</button>
-    </a>
-    <a ui-sref=".storage">
-        <button type="button" class="btn btn-primary" id="myBtn1" ng-click="storage()" style="width:90%">Storage</button>
-    </a>
-  </ul>
+<div class="navbar navbar-inverse navbar-fixed-left" ng-controller="authCtrl">
+    <ul class="nav navbar-nav" id="top">
+        <br>
+        <a ui-sref="project">
+            <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Auth</button>
+        </a>
+        <a ui-sref=".database">
+            <button type="button" class="btn btn-primary" id="myBtn1" ng-click="database()" style="width:90%">Database</button>
+        </a>
+        <a ui-sref=".storage">
+            <button type="button" class="btn btn-primary" id="myBtn1" ng-click="storage()" style="width:90%">Storage</button>
+        </a>
+    </ul>
 </div>
 
-    <br>
-   
+<br>
 
 
-<div align="center">
+
+<div>
     <ui-view>
-        <div align="center" class="circle-singleline" style="margin-top:52px;">
-            Hi
+        <div class="card1" ng-controller="authCtrl">
+            <section>
+                <section class="panel-body">
+                    <h2>Athentication</h2>
+                    <ul class="nav nav-tabs" ng-init="activeTab = 'details'">
+                        <li ng-class="{ active: activeTab === 'details' }">
+                            <a ng-click="activeTab = 'details'" ui-sref="project">User</a>
+                        </li>
+                        <li ng-class="{ active: activeTab === 'options' }">
+                            <a ng-click="activeTab = 'options'" ui-sref="project">Sign-In Method</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane" ng-class="{ active: activeTab === 'details' }">
+                            <div class="container111">
+                                <p align="right">
+                                    <button type="button" class="btn btn-primary" id="myBtn" ng-click="storage()" ng-disabled="style1 != true">New User</button></p>
+
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <!--<div class="modal-header" >
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>-->
+                                            <div class="modal-body">
+                                                <form method="post">
+                                                    <div class="form-group">
+                                                        <h2>Add an Email/Password user </h2>
+                                                        Email<br>
+                                                        <input type="text" class="form-control" id="email" ng-model="email">
+                                                        <br> Password
+                                                        <br>
+                                                        <input type="text" class="form-control" id="pwd" ng-model="pwd"><br>
+                                                        <button type="submit" ng-click="create()" class="btn btn-success btn-block" data-dismiss="modal"> Add User</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Email</th>
+                                            <th>Created</th>
+                                            <th>Sign In</th>
+                                            <th>User UID</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>{{user1.email}}</td>
+                                            <td>{{user1.date}}</td>
+                                            <td>{{user1.date}}</td>
+                                            <!--<td>july@example.com</td>-->
+
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane" ng-class="{ active: activeTab === 'options' }">
+                            Sign-in providers
+                            <div class="info">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Providers</th>
+                                            <th>Status</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fa fa-envelope" aria-hidden="true"></i> Email/Password
+                                            </td>
+                                            <td>
+                                                <switcher class="styled" ng-model="style1" ng-change="onChange(newValue, oldValue)" true-label="Enabled" false-label="Disabled">
+                                                </switcher>
+                                            </td>
+                                            <td>
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-github" aria-hidden="true" style="color:black"></i> GitHub</td>
+                                            <td>
+                                                <button class=" button Gray1" id="myBtn1" ng-click="git()">{{dis}}</button>
+                                                   
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-google-plus" style="color:red"></i> Google</td>
+                                            <td>  <button class=" button Gray1" id="myBtn" ng-click="google()">{{dis1}}</button></td>
+                                          
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </div>
-        Add bridgeDb to your web app
+        <script>
+    $(document).ready(function() {
+        $("#myBtn").click(function() {
+            $("#myModal").modal();
+        });
+    });
+</script>
     </ui-view>
 </div>
-
-<!-- <div class='circle-multiline'>
-    <span style='font-size: 2.5em'>Big Text</span></br>
-    here is more text
-    <br>new line
-</div> -->
