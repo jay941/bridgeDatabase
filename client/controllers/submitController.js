@@ -4,41 +4,39 @@ angular.module('MyApp').controller('submitController', function($scope, $http, $
     }
     console.log(data);
 
-           var config = {
-               params: data
-           };
-console.log(config);
-    $http.post('http://localhost:3000/getData',data).success(function(data) {
+    var config = {
+        params: data
+    };
+    console.log(config);
+    $http.post('http://localhost:3000/getData', data).success(function(data) {
         console.log(data.data);
-      //  $scope.jsonData = data.data;
+        //  $scope.jsonData = data.data;
     })
-  $scope.jsonData = JSON.stringify({
-  "string": "str",
-  "number": 12.34,
-  "boolean": true,
-  "array": [
-    3,
-    1,
-    2
-  ],
-  "object": {
-    "anotheObject": {
-      "key1": 1,
-      "bool": true
-    }
-  },
-  "arrayOfObjects": [
-    {
-      "key1": "Hello",
-      "key2": "World!"
-    },
-    {
-      "bool": true
-    },
-    true,
-    []
-  ],
-  "null": null});
+    $scope.jsonData = JSON.stringify({
+        "string": "str",
+        "number": 12.34,
+        "boolean": true,
+        "array": [
+            3,
+            1,
+            2
+        ],
+        "object": {
+            "anotheObject": {
+                "key1": 1,
+                "bool": true
+            }
+        },
+        "arrayOfObjects": [{
+                "key1": "Hello",
+                "key2": "World!"
+            }, {
+                "bool": true
+            },
+            true, []
+        ],
+        "null": null
+    });
     /**
      * upload a file to the server
      */
@@ -107,4 +105,5 @@ console.log(config);
     $scope.close = function() {
         console.log("hi close");
         $modalInstance.dismiss('cancel');
-    };
+    }
+});

@@ -12,7 +12,7 @@ router.post('/', function(req, res) {
     console.log(req.body.email);
     var coll = db1.getDb().collection('raju');
 
-  var db = db1.getDb().collection("userData");
+    var db = db1.getDb().collection("userData");
     db.findOne({
         email: req.body.email,
         project: {
@@ -33,13 +33,15 @@ router.post('/', function(req, res) {
                 "$push": {
                     "project": {
                         "nameForDb": proName,
-                        "nameForUser":req.body.pro
+                        "nameForUser": req.body.pro
                     }
                 }
             });
-            db1.getDb().createCollection(proName, function(err, collection){
-             if (err) throw err;
-              res.send('project is created successfully');
-          });
+            db1.getDb().createCollection(proName, function(err, collection) {
+                if (err) throw err;
+                res.send('project is created successfully');
+            });
         }
     });
+});
+module.exports = router;
