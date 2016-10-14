@@ -1,3 +1,4 @@
+
 angular.module('MyApp')
     .controller('projectCtrl', function($scope, $location, $http, $stateParams, toastr) {
         $scope.projectName1 = "";
@@ -6,8 +7,10 @@ angular.module('MyApp')
         $scope.n = $stateParams.n;
         // console.log($scope.param,$scope.n)
         var data = {
+
             key: $scope.n,
             email: $scope.param
+
         }
         $scope.user = $scope.param;
         console.log('data', data)
@@ -18,6 +21,7 @@ angular.module('MyApp')
             angular.forEach(data, function(value, key) {
                 $scope.names.push(value.nameForUser);
             });
+
             // $location.path('project')  ;
         })
         $scope.createProject = function(projectName) {
@@ -38,6 +42,7 @@ angular.module('MyApp')
 
                         $scope.names.push(value.nameForUser);
                     });
+
                     // $location.path('project')  ;
                 });
             });
@@ -48,6 +53,7 @@ angular.module('MyApp')
                 param: $scope.param,
                 n: $scope.n,
                 ProKey: projectKey
+
             });
         }
     })

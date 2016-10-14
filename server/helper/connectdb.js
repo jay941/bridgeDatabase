@@ -2,6 +2,7 @@
 /**
  * define require modules
  */
+
 // let mongoose = require('mongoose'),
 //     state = {
 //         db: null,
@@ -30,12 +31,12 @@ exports.connect = function(done) {
 
     MongoClient.connect(url, function(err, db) {
         if (err) {
-          console.log("error in connection "+err);
+            console.log("error in connection " + err);
             return done(err, null)
         }
 
         state.db = db
-        // console.log(state.db);
+            // console.log(state.db);
         done(null, state.db)
     })
 }
@@ -48,7 +49,7 @@ exports.close = function(done) {
     if (state.db) {
         state.db.close(function(err, result) {
             state.db = null
-            //state.mode = null
+                //state.mode = null
             done(err)
         })
     }

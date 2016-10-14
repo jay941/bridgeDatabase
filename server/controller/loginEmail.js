@@ -6,6 +6,7 @@
 
 var jwt = require('jwt-simple');
 var moment = require('moment');
+
 var mongodb = require('mongodb');
 var bcrypt = require('bcryptjs');
 var config = require('../config');
@@ -16,10 +17,16 @@ var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 
 
+var config = require('../config');
+
+
+
 var express = require('express'),
     router = express.Router();
+
 //var db = require('../database/db');
 db = require('../helper/connectdb.js');
+
 var jwt = require('jwt-simple');
 /*
  |--------------------------------------------------------------------------
@@ -36,6 +43,7 @@ function createJWT(user) {
 }
 
 router.post('/login', function(req, res) {
+
     var coll = db.getDb().collection('userData');
     coll.findOne({
         email: req.body.email,
@@ -93,7 +101,6 @@ router.post('/login', function(req, res) {
 //
 // });
 
-
 /*
  |--------------------------------------------------------------------------
  | Login with Google
@@ -115,6 +122,7 @@ router.post('/google', function(req, res) {
         json: true,
         form: params
     }, function(err, response, token) {
+
       var coll = db.getDb().collection('userData');
         var accessToken = token.access_token;
         var headers = {
@@ -134,7 +142,9 @@ router.post('/google', function(req, res) {
             }
             // Step 3a. Link user accounts.
             if (req.header('Authorization')) {
+
                 coll.findOne({
+
                     google: profile.sub
                 }, function(err, existingUser) {
                     if (existingUser) {
@@ -144,7 +154,9 @@ router.post('/google', function(req, res) {
                     }
                     var token = req.header('Authorization').split(' ')[1];
                     var payload = jwt.decode(token, config.TOKEN_SECRET);
+
                     coll.findById(payload.sub, function(err, user) {
+
                         if (!user) {
                             return res.status(400).send({
                                 message: 'User not found'
@@ -153,6 +165,7 @@ router.post('/google', function(req, res) {
                         user.google = profile.sub;
                         user.picture = user.picture || profile.picture.replace('sz=50', 'sz=200');
                         user.displayName = user.displayName || profile.name;
+
                         coll.insertOne(user,function() {
                             var token = createJWT(user);
                             res.send({
@@ -163,6 +176,7 @@ router.post('/google', function(req, res) {
                 });
             } else {
                 // Step 3b. Create a new user account or return an existing one.
+
                 coll.findOne({
                     google: profile.sub
                 }, function(err, existingUser) {
@@ -176,7 +190,9 @@ router.post('/google', function(req, res) {
                     user.google = profile.sub;
                     user.picture = profile.picture.replace('sz=50', 'sz=200');
                     user.displayName = profile.name;
+
                     coll.insertOne(user,function(err) {
+
                         var token = createJWT(user);
 
                         res.send({
@@ -198,6 +214,7 @@ router.post('/google', function(req, res) {
  |--------------------------------------------------------------------------
  */
 router.post('/signup', function(req, res) {
+
             console.log("hi");
             var coll = db.getDb().collection('userData');
             coll.findOne({

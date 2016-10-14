@@ -6,7 +6,9 @@ angular.module('MyApp')
           $auth.setToken(response);
           console.log(response.data);
          toastr.info('You have successfully created a new account and have been signed-in');
+
            $location.path('/profile').search({param: response.data.existingUser.email,n:response.data.existingUser._id});
+
         })
         .catch(function(response) {
           toastr.error(response.data.message);

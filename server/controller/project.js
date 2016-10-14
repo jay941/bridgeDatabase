@@ -1,5 +1,6 @@
 var express = require('express'),
     router = express.Router();
+
 //var db = require('../database/db');
 db1 = require('../helper/connectdb.js');
 router.post('/', function(req, res) {
@@ -42,7 +43,3 @@ router.post('/', function(req, res) {
           });
         }
     });
-
-
-});
-module.exports = router;

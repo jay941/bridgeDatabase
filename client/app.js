@@ -1,10 +1,12 @@
 
 
+
 angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer','ui.bootstrap','json-tree'])
 
 
 
   .config(function ($stateProvider, $urlRouterProvider, $authProvider) {
+
 
     /**
      * Helper auth functions
@@ -76,6 +78,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
         .state('project.database', {
             url: '/database',
             templateUrl: 'partials/database.html',
+
 						//controller:'projectCtrl'
 
         })
@@ -84,6 +87,7 @@ angular.module('MyApp', ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.
             url: '/storage',
             templateUrl: 'partials/storage.html',
 						// controller:'storageCtrl'
+
 
         });
 

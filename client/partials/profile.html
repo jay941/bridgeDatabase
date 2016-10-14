@@ -3,7 +3,9 @@
 </div>
 <div class="container" ng-controller="projectCtrl">
     <!--<h1 style="color:black;">hi{{param}}</h1>-->
-    <div class="container">
+
+    <div class="container" id="top1">
+
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-primary" id="myBtn">create project</button>
 
@@ -32,17 +34,20 @@
                         <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
     <hr>
      <div class="container">
+
         <div ng-repeat="d in names track by $index">
             <div class="col-sm-4">
                 <div class="div1">
 
                         <button class=" button Gray" ng-click="project(d._id)">{{d}}</button>
+
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 var express = require('express'),
+
     router = express.Router();
 var db = require('../database/db');
 router.post('/', function(req, res) {
