@@ -3,32 +3,32 @@ var express = require('express'),
 
 //var db = require('../database/db');
 db1 = require('../helper/connectdb.js');
+var mongo = require('mongodb');
 router.post('/', function(req, res) {
-
-    var str = req.body.email;
-    var res1 = str.split("@", 1);
-    var proName = res1 + "." + req.body.pro;
+  var o_id = new mongo.ObjectID(req.body.key);
+    var str = req.body.key;
+    //var res1 = str.split("@", 1);
+    var proName = str + "." + req.body.pro;
     console.log(proName);
     console.log(req.body.email);
-    var coll = db1.getDb().collection('raju');
+
 
     var db = db1.getDb().collection("userData");
     db.findOne({
-        email: req.body.email,
+         _id:  o_id,
         project: {
-            "name": proName
+            "nameForDb": proName,
+            "nameForUser": req.body.pro
         }
-
     }, function(err, existingUser) {
         if (existingUser) {
             console.log("found");
             console.log(existingUser);
-            //db.collection.find({ "project" : { "$elemMatch" : { "name" : req.body.pro} }});
             res.send('project is already available');
         } else {
             console.log("not found");
             db.update({
-                "email": req.body.email
+                _id:  o_id,
             }, {
                 "$push": {
                     "project": {
@@ -44,5 +44,5 @@ router.post('/', function(req, res) {
         }
     });
 
-  });
-  module.exports = router;
+});
+module.exports = router;

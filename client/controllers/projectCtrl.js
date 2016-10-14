@@ -13,13 +13,15 @@ angular.module('MyApp')
 
         }
         $scope.user = $scope.param;
-        console.log('data', data)
+        console.log('data', data);
+
         $http.post('http://localhost:3000/retrive', data).success(function(data) {
             console.log(data);
             $scope.projectName1 = data;
             $scope.names = [];
             angular.forEach(data, function(value, key) {
-                $scope.names.push(value.nameForUser);
+              console.log(value);
+                $scope.names.push(value);
             });
 
             // $location.path('project')  ;
@@ -39,21 +41,18 @@ angular.module('MyApp')
                     $scope.projectName1 = data12;
                     $scope.names = [];
                     angular.forEach(data12, function(value, key) {
-
-                        $scope.names.push(value.nameForUser);
+                        $scope.names.push(value);
                     });
-
-                    // $location.path('project')  ;
+                // $location.path('project')  ;
                 });
             });
         };
-        $scope.project = function(projectKey) {
-            console.log("pro key " + projectKey);
+        $scope.project = function(projectName) {
+            console.log("pro key " + projectName);
             $location.path('/project').search({
                 param: $scope.param,
                 n: $scope.n,
-                ProKey: projectKey
-
+                ProKey: projectName
             });
         }
     })
