@@ -105,5 +105,6 @@ angular.module('MyApp').controller('submitController', function($scope, $http, $
     $scope.close = function() {
         console.log("hi close");
         $modalInstance.dismiss('cancel');
-    }
+
+    };
 });
