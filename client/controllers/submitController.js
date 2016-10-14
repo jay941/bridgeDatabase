@@ -108,3 +108,4 @@ console.log(config);
         console.log("hi close");
         $modalInstance.dismiss('cancel');
     };
+});
