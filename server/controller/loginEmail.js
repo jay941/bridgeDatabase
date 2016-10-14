@@ -9,7 +9,7 @@ var moment = require('moment');
 
 var mongodb = require('mongodb');
 var bcrypt = require('bcryptjs');
-var config = require('../config');
+
 // Require the bcrypt package
 var bcrypt = require('bcrypt');
 

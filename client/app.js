@@ -88,7 +88,7 @@ angular.module('MyApp', ['ngResource','ngDialog', 'ngMessages', 'switcher','ngFi
      */
     $authProvider.google({
 						url: 'http://localhost:3000/auth/google',
-						clientId: '145774676150-bgt2f2r28p0nen5ug32vc0fl1pv47g5s.apps.googleusercontent.com',
+						clientId:'134360643986-a3cr3godmdkgo1p0lbg13gea8kah439q.apps.googleusercontent.com',
 						redirectUri: 'http://localhost:3000/profile'
 
 				});
