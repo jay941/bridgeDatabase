@@ -1,12 +1,13 @@
 var express = require('express'),
 
     router = express.Router();
-var db = require('../database/db');
+var db1 = require('../helper/connectdb.js');
 var mongo = require('mongodb');
 
 router.post('/', function(req, res) {
+
+    /**Retriving project  */
     var key = req.body.key;
-    console.log(key);
     var o_id = new mongo.ObjectID(key);
     var db = db1.getDb().collection("userData");
 
@@ -22,6 +23,7 @@ router.post('/', function(req, res) {
         }
 
     });
+
 
 
 });

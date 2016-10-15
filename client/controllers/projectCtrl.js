@@ -18,12 +18,7 @@ angular.module('MyApp')
         $http.post('http://localhost:3000/retrive', data).success(function(data) {
             console.log(data);
             $scope.projectName1 = data;
-            $scope.names = [];
-            angular.forEach(data, function(value, key) {
-              console.log(value);
-                $scope.names.push(value);
-            });
-
+          
             // $location.path('project')  ;
         })
         $scope.createProject = function(projectName) {
@@ -39,10 +34,7 @@ angular.module('MyApp')
                 $http.post('http://localhost:3000/retrive', data).success(function(data12) {
                     console.log(data12);
                     $scope.projectName1 = data12;
-                    $scope.names = [];
-                    angular.forEach(data12, function(value, key) {
-                        $scope.names.push(value);
-                    });
+                 
                 // $location.path('project')  ;
                 });
             });

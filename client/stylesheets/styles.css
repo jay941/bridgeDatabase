@@ -42,7 +42,8 @@ ul {
   margin-left: 20px;
 }
 #top{
-  margin-top: 20px;
+  margin-top: 52px;
+  height: 100px;
 }
 #top1{
   margin-top: 70px;
@@ -521,8 +522,6 @@ div.card {
    background-color:white;
     padding: 8px;
     margin-top: 5px;
-    margin-right: 20px;
-    margin-left: 260px;
     font-size: 20px;
     overflow: auto;
 
@@ -533,17 +532,12 @@ div.card {
 }
 
 div.card1 {
-   height: 622px;
+   height: 600px;
    background-color:white;
     padding: 8px;
-    margin-top: 31px;
-    margin-right: 1px;
-    margin-left: 202px;
-    font-size: 20px;
+    font-size: 12px;
     overflow: auto;
-
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
 }
@@ -552,30 +546,27 @@ div.header {
     background-color:white;
     color: white;
     padding: 8px;
-    margin-top: 50px;
-    margin-right: 20px;
-    margin-left: 260px;
-    font-size: 40px;
+    font-size: 20px;
      text-align: right;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 }
 div.container1 {
   background-color:gainsboro;
     padding: 10px;
-    width: 850px;
+    width: auto;
 }
 
 div.container111 {
     background-color: gainsboro;
     padding: 10px;
-    width: 1055px;
+    width: auto;
     margin-top: 30px;
 
 }
 .info {
     background-color: white;
     padding: 10px;
-    width: 1055px;
+    width: auto;
     margin-top: 1px;
 
 }
@@ -708,10 +699,8 @@ div.header1 {
     background-color: white;
     color: white;
     padding: 30px;
-    margin-top: 50px;
-    margin-right: 20px;
-    margin-left: 260px;
-    font-size: 40px;
+   
+    font-size: 30px;
     text-align: right;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
 }
@@ -731,3 +720,30 @@ margin-bottom: 5px;
 .styled .active .switcher-label.true { opacity: 1; }
 .styled         .switcher-label.true,
 .styled .active .switcher-label.false { opacity: .4; }
+
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.containernav{
+   padding-right: 15px;
+  padding-left: 1px;
+  margin-right: auto;
+  margin-left: auto;
+}
