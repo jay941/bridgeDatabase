@@ -84,7 +84,7 @@ ul {
 .panel1 {
   border-color: #cfd9D7;
   border-radius: 2px;
- 
+
 }
 
 .panel-default > .panel-heading {
@@ -701,10 +701,20 @@ height: 2px;
 
 .navbar-fixed-left + .container {
   padding-left: 160px;
-  
+
 
 }
-
+div.header1 {
+    background-color: white;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 260px;
+    font-size: 40px;
+    text-align: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
 
 #myBtn1{
 margin-bottom: 5px;
