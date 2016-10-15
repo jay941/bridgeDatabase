@@ -6,7 +6,7 @@
 
 var jwt = require('jwt-simple');
 var moment = require('moment');
-
+var request = require('request');
 var mongodb = require('mongodb');
 var bcrypt = require('bcryptjs');
 
@@ -186,14 +186,19 @@ router.post('/google', function(req, res) {
                             token: createJWT(existingUser)
                         });
                     }
-                    var user = new db.User();
-                    user.google = profile.sub;
-                    user.picture = profile.picture.replace('sz=50', 'sz=200');
-                    user.displayName = profile.name;
+                    // var user = new db.User();
+                    // user.google = profile.sub;
+                    // user.picture = profile.picture.replace('sz=50', 'sz=200');
+                    // user.displayName = profile.name;
+console.log(profile)
+                    coll.insertOne({
+                        displayName: profile.name,
+                        google: profile.sub,
+                        picture: profile.picture.replace('sz=50', 'sz=200'),
+                      
+                    },function(err) {
 
-                    coll.insertOne(user,function(err) {
-
-                        var token = createJWT(user);
+                        var token = createJWT(existingUser);
 
                         res.send({
                             existingUser: existingUser,

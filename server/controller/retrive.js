@@ -9,7 +9,7 @@ router.post('/', function(req, res) {
           email: req.body.email
       }, function(err, existingUser) {
         console.log(existingUser);
-        res.send(existingUser.project);
+        res.send(existingUser);
         
       });
     

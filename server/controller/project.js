@@ -10,7 +10,7 @@ router.post('/', function(req, res) {
     var proName = res1 + "." + req.body.pro;
     console.log(proName);
     console.log(req.body.email);
-    var coll = db1.getDb().collection('raju');
+ 
 
     var db = db1.getDb().collection("userData");
     db.findOne({
@@ -36,7 +36,7 @@ router.post('/', function(req, res) {
                         "nameForUser": req.body.pro
                     }
                 }
-            });
+            });   var coll = db1.getDb().collection('raju');
             db1.getDb().createCollection(proName, function(err, collection) {
                 if (err) throw err;
                 res.send('project is created successfully');
