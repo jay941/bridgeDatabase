@@ -31,8 +31,8 @@ angular.module('MyApp').controller('authCtrl', function ($scope, ngDialog, $http
     $http.post('http://localhost:3000/createUser', final).success(function (data) {
             // toastr.success(data);
             $scope.user12 = data
-                console.log(JSON.stringify(data));
-            // $http.post('http://localhost:3000/retriveUser', udata).success(function (data12) {
+                console.log(JSON.stringify(da5801d95484ca3d1809962ae0.jayta));
+            // $http.post('http://localhost:3000/retrivedata-dismiss="modal"User', udata).success(function (data12) {
                
             //         $scope.user12 = data12;
             //         console.log($scope.user12);
@@ -68,9 +68,19 @@ angular.module('MyApp').controller('authCtrl', function ($scope, ngDialog, $http
         }
 
     }
-    $scope.a = function () {
-        console.log('hii')
+    $scope.closeAll = function () {
+        var clientid=this.cid;
+        var clientsecret=this.cs;
 
+        var saveData={
+            ' clientid': clientid,
+            'clientsecret':clientsecret
+
+        }
+      
+        console.log(saveData)
+      
+  ngDialog.closeAll();
     }
 
    

@@ -4,9 +4,9 @@
 <div class="containernav" id="top">
 <div class="row">
     <div class="col-sm-2">
-<div class="sidebar-nav" >
-      <div class="navbar navbar-default" role="navigation" style="height:450px;" >
-        <div class="navbar-header">
+<div class="sidebar-nav"  >
+      <div class="navbar navbar-default" role="navigation"  >
+        <div class="navbar-header" style="height:610px;">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -145,14 +145,19 @@
                                         <tr>
                                             <td><i class="fa fa-github" aria-hidden="true" style="color:black"></i> GitHub</td>
                                             <td>
-                                                <button class=" button Gray1" id="myBtn1" ng-click="git()">{{dis}}</button>
-                                                   
+                                                <switcher class="styled" ng-model="style2" ng-change="onChange(newValue, oldValue)" true-label="Enabled" false-label="Disabled">
+                                               </switcher>
+                                              
+                                                     <p align="right">
+                                    <button type="button" class="btn btn-primary" id="myBtn" ng-click="storage()" ng-hide="style2 != true">Add</button></p>
                                             </td>
 
                                         </tr>
                                         <tr>
                                             <td><i class="fa fa-google-plus" style="color:red"></i> Google</td>
-                                            <td>  <button class=" button Gray1" id="myBtn" ng-click="google()">{{dis1}}</button></td>
+                                            <td>   <switcher class="styled" ng-model="style3" ng-change="onChange(newValue, oldValue)" true-label="Enabled" false-label="Disabled">
+                                            </switcher> <p align="right">
+                                    <button type="button" class="btn btn-primary" id="myBtn" ng-click="storage()" ng-hide="style3 != true">Add</button></p></td>
                                           
                                         </tr>
 
